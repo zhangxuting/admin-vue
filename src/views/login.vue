@@ -32,6 +32,7 @@ export default {
            const {token} = res.data.data;
            sessionStorage.setItem('token',token);
            this.$message.success(msg);
+            this.$router.push({ name: 'home' });
          }else {
            this.$message.error(msg);
          }

@@ -7,9 +7,13 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/plugins/css/style.css';
 import MyAxios from './plugins/js/myaxios';
+import moment from 'moment';
 
 Vue.config.productionTip = false;
 
+Vue.filter('formData',(v,formstr)=>{
+    return moment(v).format(formstr);
+})
 Vue.use(MyAxios);
 Vue.use(ElementUI);
 /* eslint-disable no-new */
